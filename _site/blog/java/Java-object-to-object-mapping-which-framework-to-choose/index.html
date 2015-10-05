@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US" style="overflow-y: hidden;">
+
+<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+		<title>vytas.io - Java object to object mapping - which framework to choose? - Part 1 - vytas.io</title>
+		<meta property="og:title" content="Java object to object mapping - which framework to choose? - Part 1">
+		<meta property="og:description" content=" 
+Many applications in my career had a need for a custom POJO mapper. Because of project complexity (and absence of existing mapping frameworks at that time) usually manual mapping was used in almost 99% cases :) What about another 1%? No mapping needed at all :)
+
+
+">
+		
+		<link rel="canonical" href="http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/">
+		
+		
+		<link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="/css/style.css"/>
+		<link rel="stylesheet" id="dropmenu-css" href="/css/dropmenu.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="styles-css" href="/css/styles.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="list-styles-css" href="/css/fa-list.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="justifiedGallery.min-css" href="/css/justifiedGallery.min.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="swipebox-css" href="/js/swipebox/swipebox.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="custom-styles-css" href="/css/custom.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Merriweather%3A300%7CRaleway%3A700%2C400&amp;ver=1415600913" type="text/css" media="all"/>
+		<script type="text/javascript">
+/* <![CDATA[ */
+var inafx_theme = {"niceScroll":"1","stickyHeader":"0"};
+/* ]]> */
+</script>
+		<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+		<meta name="generator" content="WordPress 4.0.8"/>
+		<link rel="shortcut icon" type="image/png" href="images/author.jpg | prepend: site.baseurl }}"/>
+	</head>
+	
+	
+	
+
+<body class="home blog wide ajax-inafx-likes" role="document">
+		<div class="page-wrapper">
+			<header id="header-wrapper">
+				<div id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="logo">
+									<div class="logo-text">
+										<a href="http://vytas.io/">
+            								vytas.io        
+            							</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navbar-wrapper">
+						<div class="navbar navbar-small dropmenu" role="banner">
+							<div class="container">
+								<nav id="nav-dropdown-menu1" class="nav-dropdown-menu collapse navbar-collapse">
+									<ul id="menu-top-menu" class="nav">
+										<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 dropdown">
+											<a title="Home" href="/index.html" class="dropdown-toggle" aria-haspopup="true">
+												Home
+											</a>
+										</li>
+										<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 dropdown">
+											<a title="Java" href="/categories/java/" class="dropdown-toggle" aria-haspopup="true">
+												Java
+											</a>
+										</li>
+										<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 dropdown">
+											<a title="Bookmarks" href="index.html" class="dropdown-toggle" aria-haspopup="true">
+												Bookmarks
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div>
+		<div id="main" style="padding-top: 0px;">
+			<div id="content">
+				<div class="container">
+					<div class="row">
+						<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+                                                        <!-- ## zoom-box start ## -->
+                
+                <figure class="post-featured-img">
+                        <img src="/images/object-mapping.jpg" alt=" Java object to object mapping - which framework to choose? - Part 1" class="img-responsive">
+                    </figure>
+                
+                
+                
+               
+                <!-- ## zoom-box end ## -->
+                            <!-- ## post-entry start ## -->
+    <div class="row post-entry">
+        <!-- ## title start ## -->
+        <div class="col-sm-12">
+            <!-- ## post-header start ## -->
+<header class="post-header">
+    <!-- ## post-title ## -->
+    <h2 class="post-title">
+    Java object to object mapping - which framework to choose? - Part 1
+    </h2>
+</header>
+<!-- ## post-header end ## -->        </div>
+        <!-- ## title end ## -->
+        <!-- ## entry-meta start ## -->
+        <div class="col-sm-12 entry-meta">
+                        <span class="meta"><span class="fa fa-file-text-o"></span></span>            
+                         
+                                 <span class="meta"> On <span class="date"><time class="entry-date">August 4, 2015</time></span></span>   
+                            	<span class="meta">
+                                          <span class="fa fa-folder-open-o"></span>
+                                          <span class="categories-links">
+                                          	<a href="/categories/java/" rel="category tag">java</a>
+                                          </span></span>        </div>
+        <!-- ## entry-meta end ## -->
+        <!-- ## entry-content start ## -->
+<div class="col-sm-12 entry-content">
+<p><span style="color: #000000;">
+
+<p>
+Many applications in my career had a need for a custom POJO mapper. Because of project complexity (and absence of existing mapping frameworks at that time) usually manual mapping was used in almost 99% cases :) What about another 1%? No mapping needed at all :)
+</p>
+
+<p>
+I was following the discussions and mapping frameworks from time to time and was trying to figure out if I need one already? Are there any frameworks to do the job? Are there any frameworks to do the job right? Is it worth to look for such framework?
+</p>
+
+<p><a href="#">
+    <img class="img-responsive" src="/img/object-mapping.jpg" alt="" />
+</a>
+<span class="caption text-muted">Photographs by <a href="https://www.flickr.com/photos/bonaparty/">Louis K.</a>.</span></p>
+
+<p>
+It depends. 
+</p>
+
+<ul>
+<li>If your task is simple - then why another framework in your classpath?</li>
+<li>If your objects are complex - will the framework do the job? You know the logic behind, so it might happen that you will complete the task faster than finding, configuring, running and testing a new framework;</li>
+<li>For one-to-one mapping and cloning (same source type, same target type) maybe apache commons beanutils is enough?</li>
+<li>Boring daily mapping? Yeah, maybe the mapper will help to make your life more interesting!</li>
+</ul>
+
+<h3>What are the requirements?</h3>
+
+<p>
+Let's make some requirements for a mapping framework. These will eliminate many of already existing  in the market.
+</p>
+
+<ul>
+<li>DTO to JPA (or other DTO, does not matter too much) - meaning that JPA entity will not be exposed to a public world;</li>
+<li>Compile time. Why? Do you really want a runtime bean resolving, reflection, etc? Then think about performance before choosing the right framework;</li>
+<li>Annotation based. Ok, annotation based and compile time requirements are little bit too much, because annotation is used only to generate a code for you. But if it is easy to use - why not?</li>
+</ul>
+
+<h3>Mapping frameworks</h3>
+
+<p>
+There is a great article covering the existing frameworks: 
+<a href="http://www.javacodegeeks.com/2013/10/java-object-to-object-mapper.html" rel="nofollow">Java Object to Object Mapper</a>
+</p>
+
+<p>
+The majority of these frameworks do not have annotation based configuration except 
+<a href="http://dozer.sourceforge.net/" rel="nofollow">Dozer</a>. However Dozer does not fly well according the performance comparision <a href="http://blog.sokolenko.me/2013/05/dozer-vs-orika-vs-manual.html" rel="nofollow">Dozer vs Orika vs Manual</a>. So I excluded this framework as well.
+</p>
+
+<p>
+More interesting solutions are <a href="http://www.selma-java.org/" rel="nofollow">Selma</a> and <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a>.
+</p>
+
+<p>
+I will try to cover them in <a href="/blog/Java-object-to-object-mapping-which-framework-to-choose-Part-2/">Part 2</a>! 
+</p>
+
+<p>
+<span class="caption text-muted">Photographs by <a href="https://www.flickr.com/photos/bonaparty/">Louis K.</a>.</span>
+</p>
+
+
+
+</span>
+
+
+</p>
+</div>
+<div class="col-sm-12 entry-meta-tags">
+	<span class="tags-links">
+		 <a href="/tags/java" title="View posts tagged with &quot;java&quot;"> java</a>  
+		 <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"> java-ee</a>  
+		 <a href="/tags/selma" title="View posts tagged with &quot;selma&quot;"> selma</a>  
+		 <a href="/tags/mapstruct" title="View posts tagged with &quot;mapstruct&quot;"> mapstruct</a>  
+		 <a href="/tags/mapping" title="View posts tagged with &quot;mapping&quot;"> mapping</a>  
+		 
+	</span>
+</div>
+    </div>
+<div class="row post-social">
+    <div class="col-sm-12">
+        <!-- ## inline list start ## -->
+        <ul class="list-inline">
+            <li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/"></a></li>
+            <li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/&amp;text=Java object to object mapping - which framework to choose? - Part 1','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/&amp;text=Java object to object mapping - which framework to choose? - Part 1"></a></li>
+            <li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/"></a></li>
+            <li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/"></a></li>
+                    </ul>
+        <!-- ## inline list end ## -->
+    </div>
+</div>
+<!-- ## post-social end ## -->
+</article>
+
+
+
+						
+					</div>
+				</div>
+			</div>
+			<!-- Footer -->
+<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 footer-copyright">
+							<a href="http:/vytas.io/"> vytas.io</a>
+							<ul class="social list-inline">
+										<li class="social_li">
+											<a class="social_link " href="https://www.facebook.com/vytas.io" target="_blank">
+												<span class="fa fa-facebook"/>
+											</a>
+										</li>
+										<li class="social_li">
+											<a class="social_link " href="https://www.facebook.com/vytas.io" target="_blank">
+												<span class="fa fa-twitter"/>
+											</a>
+										</li>
+										
+										<li class="social_li">
+											<a class="social_link " href="https://www.linkedin.com/in/vytasr" target="_blank">
+												<span class="fa fa-linkedin"/>
+											</a>
+										</li>
+									</ul>
+						</div>
+						
+					</div>
+				</div>
+			</footer>
+			
+    		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/js/bootstrap.dropmenu.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/jquery.justifiedGallery.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/swipebox/jquery.swipebox.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/cycle/jquery.cycle.all.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/detectmobilebrowser.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/jquery.nicescroll.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/app.ui.js?ver=4.0.8"></script>
+		</div>
+    
+</body>
+<a href="#top" class="scrollup" style="display: block;">
+			<span class="fa fa-chevron-up"/>
+		</a>
+</html>

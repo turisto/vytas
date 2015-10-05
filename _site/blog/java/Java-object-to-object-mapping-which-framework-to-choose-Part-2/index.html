@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US" style="overflow-y: hidden;">
+
+<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+		<title>vytas.io - Java object to object mapping - which framework to choose? - Part 2 - vytas.io</title>
+		<meta property="og:title" content="Java object to object mapping - which framework to choose? - Part 2">
+		<meta property="og:description" content=" 
+We've started a discussion on current mapping frameworks in Part 1.
+Selection was minimized to Selma and MapStruct.
+So which one to choose if I do not want to do the job myself?
+
+
+">
+		
+		<link rel="canonical" href="http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/">
+		
+		
+		<link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="/css/style.css"/>
+		<link rel="stylesheet" id="dropmenu-css" href="/css/dropmenu.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="styles-css" href="/css/styles.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="list-styles-css" href="/css/fa-list.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="justifiedGallery.min-css" href="/css/justifiedGallery.min.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="swipebox-css" href="/js/swipebox/swipebox.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="custom-styles-css" href="/css/custom.css?ver=4.0.8" type="text/css" media="all"/>
+		<link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Merriweather%3A300%7CRaleway%3A700%2C400&amp;ver=1415600913" type="text/css" media="all"/>
+		<script type="text/javascript">
+/* <![CDATA[ */
+var inafx_theme = {"niceScroll":"1","stickyHeader":"0"};
+/* ]]> */
+</script>
+		<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+		<meta name="generator" content="WordPress 4.0.8"/>
+		<link rel="shortcut icon" type="image/png" href="images/author.jpg | prepend: site.baseurl }}"/>
+	</head>
+	
+	
+	
+
+<body class="home blog wide ajax-inafx-likes" role="document">
+		<div class="page-wrapper">
+			<header id="header-wrapper">
+				<div id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="logo">
+									<div class="logo-text">
+										<a href="http://vytas.io/">
+            								vytas.io        
+            							</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navbar-wrapper">
+						<div class="navbar navbar-small dropmenu" role="banner">
+							<div class="container">
+								<nav id="nav-dropdown-menu1" class="nav-dropdown-menu collapse navbar-collapse">
+									<ul id="menu-top-menu" class="nav">
+										<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 dropdown">
+											<a title="Home" href="/index.html" class="dropdown-toggle" aria-haspopup="true">
+												Home
+											</a>
+										</li>
+										<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 dropdown">
+											<a title="Java" href="/categories/java/" class="dropdown-toggle" aria-haspopup="true">
+												Java
+											</a>
+										</li>
+										<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 dropdown">
+											<a title="Bookmarks" href="index.html" class="dropdown-toggle" aria-haspopup="true">
+												Bookmarks
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div>
+		<div id="main" style="padding-top: 0px;">
+			<div id="content">
+				<div class="container">
+					<div class="row">
+						<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+                                                        <!-- ## zoom-box start ## -->
+                
+                <figure class="post-featured-img">
+                        <img src="/images/object-mapping.jpg" alt=" Java object to object mapping - which framework to choose? - Part 2" class="img-responsive">
+                    </figure>
+                
+                
+                
+               
+                <!-- ## zoom-box end ## -->
+                            <!-- ## post-entry start ## -->
+    <div class="row post-entry">
+        <!-- ## title start ## -->
+        <div class="col-sm-12">
+            <!-- ## post-header start ## -->
+<header class="post-header">
+    <!-- ## post-title ## -->
+    <h2 class="post-title">
+    Java object to object mapping - which framework to choose? - Part 2
+    </h2>
+</header>
+<!-- ## post-header end ## -->        </div>
+        <!-- ## title end ## -->
+        <!-- ## entry-meta start ## -->
+        <div class="col-sm-12 entry-meta">
+                        <span class="meta"><span class="fa fa-file-text-o"></span></span>            
+                         
+                                 <span class="meta"> On <span class="date"><time class="entry-date">August 19, 2015</time></span></span>   
+                            	<span class="meta">
+                                          <span class="fa fa-folder-open-o"></span>
+                                          <span class="categories-links">
+                                          	<a href="/categories/java/" rel="category tag">java</a>
+                                          </span></span>        </div>
+        <!-- ## entry-meta end ## -->
+        <!-- ## entry-content start ## -->
+<div class="col-sm-12 entry-content">
+<p><span style="color: #000000;">
+
+<p>
+We've started a discussion on current mapping frameworks in <a href="/blog/Java-object-to-object-mapping-which-framework-to-choose/">Part 1</a>.
+Selection was minimized to <a href="http://www.selma-java.org/" rel="nofollow">Selma</a> and <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a>.
+So which one to choose if I do not want to do the job myself?
+</p>
+
+<p>
+Selma and <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a> works well when initial learning curve passed how to configure a mapper. 
+There might be the personal preference which one to choose. More customizations come with Mapstruct. Generated code might be more readable in <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a>, however they both might generate duplicated code when mapping from Object to a simple entity in case Object has multiple properties mapped. 
+</p>
+
+<h3>Simple comparison</h3>
+
+<table>
+<thead>
+<tr>
+<th>Subject/Feature
+</th>
+<th>Selma
+</th>
+<th>MapStruct
+</th>
+</tr>
+</thead>
+
+<tr>
+<td>Define mapping once
+</td>
+<td>ok
+</td>
+<td>using @InheritInverseConfiguration does not work in more complex scenarios (at the given time of writing the blog entry)
+</td>
+</tr>
+
+
+<tr>
+<td>Ease to define the mapping
+</td>
+<td>yes
+</td>
+<td>needs a good initial learning curve
+</td>
+</tr>
+
+
+<tr>
+<td>Customizations
+</td>
+<td>minimal
+</td>
+<td>advanced. Many places may be customized
+</td>
+</tr>
+
+<tr>
+<td>Generated code
+</td>
+<td>with duplications, readability might be improved
+</td>
+<td>with duplications, readability is better than Selma
+</td>
+</tr>
+
+<tr>
+<td>Annotation usage 
+</td>
+<td>class level
+</td>
+<td>method level
+</td>
+</tr>
+
+
+</table>
+
+<h3>Conclusion</h3>
+
+<p>
+I think both projects are great and it's up to you to decide which one you would like to use in your project. 
+There is always another option - do it yourself :)
+Currently I am using <a href="http://www.selma-java.org/" rel="nofollow">Selma</a>. Happy so far :)
+
+</p>
+
+<h3>Resources</h3>
+
+<ul>
+<li><a href="https://github.com/aracrown/ara-blog-examples/tree/master/s01e05" rel="nofollow">Source in Git repository</a></li>
+
+</ul>
+<p>
+<span class="caption text-muted">Photographs by <a href="https://www.flickr.com/photos/bonaparty/">Louis K.</a>.</span>
+</p>
+
+
+
+</span>
+
+
+</p>
+</div>
+<div class="col-sm-12 entry-meta-tags">
+	<span class="tags-links">
+		 <a href="/tags/java" title="View posts tagged with &quot;java&quot;"> java</a>  
+		 <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"> java-ee</a>  
+		 <a href="/tags/selma" title="View posts tagged with &quot;selma&quot;"> selma</a>  
+		 <a href="/tags/mapstruct" title="View posts tagged with &quot;mapstruct&quot;"> mapstruct</a>  
+		 <a href="/tags/mapping" title="View posts tagged with &quot;mapping&quot;"> mapping</a>  
+		 
+	</span>
+</div>
+    </div>
+<div class="row post-social">
+    <div class="col-sm-12">
+        <!-- ## inline list start ## -->
+        <ul class="list-inline">
+            <li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/"></a></li>
+            <li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/&amp;text=Java object to object mapping - which framework to choose? - Part 2','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/&amp;text=Java object to object mapping - which framework to choose? - Part 2"></a></li>
+            <li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/"></a></li>
+            <li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/"></a></li>
+                    </ul>
+        <!-- ## inline list end ## -->
+    </div>
+</div>
+<!-- ## post-social end ## -->
+</article>
+
+
+
+						
+					</div>
+				</div>
+			</div>
+			<!-- Footer -->
+<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 footer-copyright">
+							<a href="http:/vytas.io/"> vytas.io</a>
+							<ul class="social list-inline">
+										<li class="social_li">
+											<a class="social_link " href="https://www.facebook.com/vytas.io" target="_blank">
+												<span class="fa fa-facebook"/>
+											</a>
+										</li>
+										<li class="social_li">
+											<a class="social_link " href="https://www.facebook.com/vytas.io" target="_blank">
+												<span class="fa fa-twitter"/>
+											</a>
+										</li>
+										
+										<li class="social_li">
+											<a class="social_link " href="https://www.linkedin.com/in/vytasr" target="_blank">
+												<span class="fa fa-linkedin"/>
+											</a>
+										</li>
+									</ul>
+						</div>
+						
+					</div>
+				</div>
+			</footer>
+			
+    		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/js/bootstrap.dropmenu.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/jquery.justifiedGallery.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/swipebox/jquery.swipebox.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/cycle/jquery.cycle.all.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/detectmobilebrowser.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/jquery.nicescroll.min.js?ver=4.0.8"></script>
+			<script type="text/javascript" src="/js/app.ui.js?ver=4.0.8"></script>
+		</div>
+    
+</body>
+<a href="#top" class="scrollup" style="display: block;">
+			<span class="fa fa-chevron-up"/>
+		</a>
+</html>

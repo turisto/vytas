@@ -88,13 +88,17 @@ var inafx_theme = {"niceScroll":"1","stickyHeader":"0"};
     				
 <article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
 	
+	<figure class="post-featured-img">
+    	<img src="/images/object-mapping.jpg" alt=" Java object to object mapping - which framework to choose? - Part 2" class="img-responsive">
+   </figure>       
+   
                 
     <div class="row post-entry">
         <div class="col-sm-12">
 			<header class="post-header">
-				<a href="/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/">
+				<a href="/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/">
     			<h2 class="post-title">
-    				Java EE application configuration using Aeonbits Owner
+    				Java object to object mapping - which framework to choose? - Part 2
     			</h2>
     			</a>
 			</header>
@@ -103,7 +107,7 @@ var inafx_theme = {"niceScroll":"1","stickyHeader":"0"};
     		<span class="meta">
     			<span class="fa fa-file-text-o"></span>
     		</span>            
-           	<span class="meta"> On <span class="date"><time class="entry-date" datetime="2015-05-01">May 1, 2015</time>
+           	<span class="meta"> On <span class="date"><time class="entry-date" datetime="2015-08-19">August 19, 2015</time>
                 </span>
             </span>            
             <span class="meta"><span class="fa fa-folder-open-o"></span><span class="categories-links">
@@ -114,25 +118,242 @@ var inafx_theme = {"niceScroll":"1","stickyHeader":"0"};
 		<div class="col-sm-12 entry-content">
 			<p>
 			<span style="color: #000000;">
-				<p> 
-Every (almost) Java EE based application needs configuration — local, test or production — it does not matter. What matters — how easily this
-configuration solution is maintained and how easily the environment may be changed. 
+				<p>
+We've started a discussion on current mapping frameworks in <a href="/blog/Java-object-to-object-mapping-which-framework-to-choose/">Part 1</a>.
+Selection was minimized to <a href="http://www.selma-java.org/" rel="nofollow">Selma</a> and <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a>.
+So which one to choose if I do not want to do the job myself?
 </p>
 
 
 			</span>  
   			</p>
   			
-  			 <a href="/tags/cdi" title="View posts tagged with &quot;cdi&quot;"><span class="label label-success"><i class="fa fa-tag"></i> cdi</span></a>     <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java-ee</span></a>     <a href="/tags/owner" title="View posts tagged with &quot;owner&quot;"><span class="label label-success"><i class="fa fa-tag"></i> owner</span></a>     <a href="/tags/configuration" title="View posts tagged with &quot;configuration&quot;"><span class="label label-success"><i class="fa fa-tag"></i> configuration</span></a>    
+  			 <a href="/tags/java" title="View posts tagged with &quot;java&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java</span></a>     <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java-ee</span></a>     <a href="/tags/selma" title="View posts tagged with &quot;selma&quot;"><span class="label label-success"><i class="fa fa-tag"></i> selma</span></a>     <a href="/tags/mapstruct" title="View posts tagged with &quot;mapstruct&quot;"><span class="label label-success"><i class="fa fa-tag"></i> mapstruct</span></a>     <a href="/tags/mapping" title="View posts tagged with &quot;mapping&quot;"><span class="label label-success"><i class="fa fa-tag"></i> mapping</span></a>    
 		</div>
     </div>
 	<div class="row post-social">
     	<div class="col-sm-12">
         	<ul class="list-inline">
-            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner//blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/"></a></li>
-            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/&amp;text=Java EE application configuration using Aeonbits Owner','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/&amp;text=Java EE application configuration using Aeonbits Owner"></a></li>
-            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/"></a></li>
-            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-EE-application-configuration-using-Aeonbits-Owner/"></a></li>
+            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2//blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/"></a></li>
+            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/&amp;text=Java object to object mapping - which framework to choose? - Part 2','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/&amp;text=Java object to object mapping - which framework to choose? - Part 2"></a></li>
+            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/"></a></li>
+            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose-Part-2/"></a></li>
+            </ul>
+    	</div>
+	</div>
+</article>
+
+<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+	
+	<figure class="post-featured-img">
+    	<img src="/images/object-mapping.jpg" alt=" Java object to object mapping - which framework to choose? - Part 1" class="img-responsive">
+   </figure>       
+   
+                
+    <div class="row post-entry">
+        <div class="col-sm-12">
+			<header class="post-header">
+				<a href="/blog/java/Java-object-to-object-mapping-which-framework-to-choose/">
+    			<h2 class="post-title">
+    				Java object to object mapping - which framework to choose? - Part 1
+    			</h2>
+    			</a>
+			</header>
+		</div>
+		<div class="col-sm-12 entry-meta">
+    		<span class="meta">
+    			<span class="fa fa-file-text-o"></span>
+    		</span>            
+           	<span class="meta"> On <span class="date"><time class="entry-date" datetime="2015-08-04">August 4, 2015</time>
+                </span>
+            </span>            
+            <span class="meta"><span class="fa fa-folder-open-o"></span><span class="categories-links">
+                                 <a href="/categories/java/" rel="category tag">java</a>
+            	</span>
+            </span>        
+        </div>
+		<div class="col-sm-12 entry-content">
+			<p>
+			<span style="color: #000000;">
+				<p>
+Many applications in my career had a need for a custom POJO mapper. Because of project complexity (and absence of existing mapping frameworks at that time) usually manual mapping was used in almost 99% cases :) What about another 1%? No mapping needed at all :)
+</p>
+
+
+			</span>  
+  			</p>
+  			
+  			 <a href="/tags/java" title="View posts tagged with &quot;java&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java</span></a>     <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java-ee</span></a>     <a href="/tags/selma" title="View posts tagged with &quot;selma&quot;"><span class="label label-success"><i class="fa fa-tag"></i> selma</span></a>     <a href="/tags/mapstruct" title="View posts tagged with &quot;mapstruct&quot;"><span class="label label-success"><i class="fa fa-tag"></i> mapstruct</span></a>     <a href="/tags/mapping" title="View posts tagged with &quot;mapping&quot;"><span class="label label-success"><i class="fa fa-tag"></i> mapping</span></a>    
+		</div>
+    </div>
+	<div class="row post-social">
+    	<div class="col-sm-12">
+        	<ul class="list-inline">
+            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose//blog/java/Java-object-to-object-mapping-which-framework-to-choose/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/"></a></li>
+            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/&amp;text=Java object to object mapping - which framework to choose? - Part 1','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/&amp;text=Java object to object mapping - which framework to choose? - Part 1"></a></li>
+            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/"></a></li>
+            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Java-object-to-object-mapping-which-framework-to-choose/"></a></li>
+            </ul>
+    	</div>
+	</div>
+</article>
+
+<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+	
+                
+    <div class="row post-entry">
+        <div class="col-sm-12">
+			<header class="post-header">
+				<a href="/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/">
+    			<h2 class="post-title">
+    				Micro Java EE application with Wildfly Swarm
+    			</h2>
+    			</a>
+			</header>
+		</div>
+		<div class="col-sm-12 entry-meta">
+    		<span class="meta">
+    			<span class="fa fa-file-text-o"></span>
+    		</span>            
+           	<span class="meta"> On <span class="date"><time class="entry-date" datetime="2015-06-09">June 9, 2015</time>
+                </span>
+            </span>            
+            <span class="meta"><span class="fa fa-folder-open-o"></span><span class="categories-links">
+                                 <a href="/categories/java/" rel="category tag">java</a>
+            	</span>
+            </span>        
+        </div>
+		<div class="col-sm-12 entry-content">
+			<p>
+			<span style="color: #000000;">
+				<p>
+Microservices are here already for a while. They came with cloud solutions, RESTful services, <a href="http://backbonejs.org/" rel="nofollow">Backbone.js</a> , 
+<a href="https://angularjs.org/" rel="nofollow">AngularJS</a>  and other javascript frameworks, however only recently they got a new keyword - "microservices".
+And of course they will stay. Due to the nature of nowadays software architecture, cloud hosting and client rendering.
+I you want to be pragmatic and lean - you do not need microservices. If your software is complex, it needs easy support, fast deployment, easy clustering and serving for a single module (e.g. finance module within huge
+CRM) then you might thing about going into microservices.
+And here <a href="http://wildfly.org/news/2015/06/05/WildFly-Swarm-Alpha2/" rel="nofollow">Wildfly Swarm</a> comes in.
+
+</p>
+
+			</span>  
+  			</p>
+  			
+  			 <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java-ee</span></a>     <a href="/tags/wildfly" title="View posts tagged with &quot;wildfly&quot;"><span class="label label-success"><i class="fa fa-tag"></i> wildfly</span></a>     <a href="/tags/swarm" title="View posts tagged with &quot;swarm&quot;"><span class="label label-success"><i class="fa fa-tag"></i> swarm</span></a>     <a href="/tags/microservices" title="View posts tagged with &quot;microservices&quot;"><span class="label label-success"><i class="fa fa-tag"></i> microservices</span></a>     <a href="/tags/REST" title="View posts tagged with &quot;REST&quot;"><span class="label label-success"><i class="fa fa-tag"></i> REST</span></a>    
+		</div>
+    </div>
+	<div class="row post-social">
+    	<div class="col-sm-12">
+        	<ul class="list-inline">
+            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm//blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/"></a></li>
+            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/&amp;text=Micro Java EE application with Wildfly Swarm','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/&amp;text=Micro Java EE application with Wildfly Swarm"></a></li>
+            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/"></a></li>
+            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Micro-Java-EE-application-with-Wildfly-Swarm/"></a></li>
+            </ul>
+    	</div>
+	</div>
+</article>
+
+<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+	
+                
+    <div class="row post-entry">
+        <div class="col-sm-12">
+			<header class="post-header">
+				<a href="/blog/java/Writing-type-safe-queries-with-QueryDSL/">
+    			<h2 class="post-title">
+    				Writing type-safe JPA queries with QueryDSL
+    			</h2>
+    			</a>
+			</header>
+		</div>
+		<div class="col-sm-12 entry-meta">
+    		<span class="meta">
+    			<span class="fa fa-file-text-o"></span>
+    		</span>            
+           	<span class="meta"> On <span class="date"><time class="entry-date" datetime="2015-05-22">May 22, 2015</time>
+                </span>
+            </span>            
+            <span class="meta"><span class="fa fa-folder-open-o"></span><span class="categories-links">
+                                 <a href="/categories/java/" rel="category tag">java</a>
+            	</span>
+            </span>        
+        </div>
+		<div class="col-sm-12 entry-content">
+			<p>
+			<span style="color: #000000;">
+				<p>
+I became a fan of type-safe queries long time ago (unless I need plain SQL queries via JDBC). What are type-safe queries and how easily they can be maintained? 
+<a href="http://docs.oracle.com/javaee/7/tutorial/persistence-criteria001.htm#GJRIJ" rel="nofollow">Criteria</a>, <a href="http://www.querydsl.com/" rel="nofollow">QueryDSL</a>, <a href="http://www.jooq.org/" rel="nofollow">JOOQ</a>? This post is not about which framework is the best one. 
+It’s about how easily implement JPA queries using 
+<a href="http://www.querydsl.com/" rel="nofollow">QueryDSL</a>.
+
+</p>
+
+			</span>  
+  			</p>
+  			
+  			 <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java-ee</span></a>     <a href="/tags/QueryDSL" title="View posts tagged with &quot;QueryDSL&quot;"><span class="label label-success"><i class="fa fa-tag"></i> QueryDSL</span></a>     <a href="/tags/JPA" title="View posts tagged with &quot;JPA&quot;"><span class="label label-success"><i class="fa fa-tag"></i> JPA</span></a>    
+		</div>
+    </div>
+	<div class="row post-social">
+    	<div class="col-sm-12">
+        	<ul class="list-inline">
+            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL//blog/java/Writing-type-safe-queries-with-QueryDSL/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/"></a></li>
+            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/&amp;text=Writing type-safe JPA queries with QueryDSL','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/&amp;text=Writing type-safe JPA queries with QueryDSL"></a></li>
+            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/"></a></li>
+            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Writing-type-safe-queries-with-QueryDSL/"></a></li>
+            </ul>
+    	</div>
+	</div>
+</article>
+
+<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+	
+                
+    <div class="row post-entry">
+        <div class="col-sm-12">
+			<header class="post-header">
+				<a href="/blog/java/Web-application-environment-configuration-using-maven-profiles/">
+    			<h2 class="post-title">
+    				Web application environment configuration using maven profiles
+    			</h2>
+    			</a>
+			</header>
+		</div>
+		<div class="col-sm-12 entry-meta">
+    		<span class="meta">
+    			<span class="fa fa-file-text-o"></span>
+    		</span>            
+           	<span class="meta"> On <span class="date"><time class="entry-date" datetime="2015-05-11">May 11, 2015</time>
+                </span>
+            </span>            
+            <span class="meta"><span class="fa fa-folder-open-o"></span><span class="categories-links">
+                                 <a href="/categories/java/" rel="category tag">java</a>
+            	</span>
+            </span>        
+        </div>
+		<div class="col-sm-12 entry-content">
+			<p>
+			<span style="color: #000000;">
+				<p>
+Ok, this bog will be short. I will just share some small maven code snippets to configure your build and development IDE environment.
+
+</p>
+
+			</span>  
+  			</p>
+  			
+  			 <a href="/tags/java-ee" title="View posts tagged with &quot;java-ee&quot;"><span class="label label-success"><i class="fa fa-tag"></i> java-ee</span></a>     <a href="/tags/configuration" title="View posts tagged with &quot;configuration&quot;"><span class="label label-success"><i class="fa fa-tag"></i> configuration</span></a>     <a href="/tags/maven" title="View posts tagged with &quot;maven&quot;"><span class="label label-success"><i class="fa fa-tag"></i> maven</span></a>     <a href="/tags/CD" title="View posts tagged with &quot;CD&quot;"><span class="label label-success"><i class="fa fa-tag"></i> CD</span></a>    
+		</div>
+    </div>
+	<div class="row post-social">
+    	<div class="col-sm-12">
+        	<ul class="list-inline">
+            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles//blog/java/Web-application-environment-configuration-using-maven-profiles/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/"></a></li>
+            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/&amp;text=Web application environment configuration using maven profiles','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/&amp;text=Web application environment configuration using maven profiles"></a></li>
+            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/"></a></li>
+            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/Web-application-environment-configuration-using-maven-profiles/"></a></li>
             </ul>
     	</div>
 	</div>
@@ -140,6 +361,15 @@ configuration solution is maintained and how easily the environment may be chang
 
 
 <!-- Pager -->
+
+<ul class="pager">
+    
+    
+    <li class="next">
+        <a href="/page2">Older Posts &rarr;</a>
+    </li>
+    
+</ul>
 		
     					</div>
     					
