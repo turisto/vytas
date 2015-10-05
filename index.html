@@ -11,11 +11,17 @@ description: "java code snippets"
     	<img src="/{{ post.header-img }}" alt=" {{ post.title }}" class="img-responsive">
    </figure>       
    {% endif %}
+   
+   {% if post.external-img %}
+	<figure class="post-featured-img">
+    	<img src="{{ post.external-img }}" alt=" {{ post.title }}" class="img-responsive">
+   </figure>       
+   {% endif %}
                 
     <div class="row post-entry">
         <div class="col-sm-12">
 			<header class="post-header">
-				<a href="{{ post.url | prepend: site.baseurl }}">
+				<a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %} "  {% if post.external %} rel="nofolow"{% endif %}>
     			<h2 class="post-title">
     				{{ post.title }}
     			</h2>
@@ -47,10 +53,10 @@ description: "java code snippets"
 	<div class="row post-social">
     	<div class="col-sm-12">
         	<ul class="list-inline">
-            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u={{ site.url }}{{ post.url }}{{ post.url }}','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ post.url }}"></a></li>
-            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url={{ site.url }}{{ post.url }}&amp;text={{post.title}}','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url={{ site.url }}{{ post.url }}&amp;text={{post.title}}"></a></li>
-            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url={{ site.url }}{{ post.url }}','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url={{ site.url }}{{ post.url }}"></a></li>
-            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ post.url }}','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ post.url }}"></a></li>
+            	<li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"></a></li>
+            	<li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}&amp;text={{post.title}}','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}&amp;text={{post.title}}"></a></li>
+            	<li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"></a></li>
+            	<li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"></a></li>
             </ul>
     	</div>
 	</div>

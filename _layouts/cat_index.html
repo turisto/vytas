@@ -14,7 +14,7 @@ layout: page
     <div class="row post-entry">
         <div class="col-sm-12">
 			<header class="post-header">
-				<a href="{{ post.url | prepend: site.baseurl }}">
+				<a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %} " {% if post.external %} rel="nofolow"{% endif %}>
     			<h2 class="post-title">
     				{{ post.title }}
     			</h2>
