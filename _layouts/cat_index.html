@@ -10,6 +10,12 @@ layout: page
     	<img src="/{{ post.header-img }}" alt=" {{ post.title }}" class="img-responsive">
    </figure>       
    {% endif %}
+   
+    {% if post.external-img %}
+	<figure class="post-featured-img">
+    	<img src="{{ post.external-img }}" alt=" {{ post.title }}" class="img-responsive">
+   </figure>       
+   {% endif %}
                 
     <div class="row post-entry">
         <div class="col-sm-12">

@@ -1,0 +1,16 @@
+---
+layout: post
+title: Your first look at the IntelliJ IDEA 15 Preview
+category: tools
+link: "https://jaxenter.com/first-look-at-the-intellij-idea-15-preview-121222.html"
+
+"external-img": "https://jaxenter.com/wp-content/uploads/2015/10/intellij-IDEA-15-logo.png"
+published: true
+external: true
+---
+
+<p>
+After access was granted via JetBrains' Early Access Program, the official preview for IntelliJ IDEA 15 has landed: weekly sneak peeks have culminated in a built-in Kotlin M14 plugin, updated database tools and easier debugging of lambda expressions.
+
+</p>
+
