@@ -1,10 +1,9 @@
 ---
 layout: page
-description: "java code snippets"
-"header-img": "img/1.png"
 ---
 
-{% for post in paginator.posts %}
+{% for post in site.posts %}
+{% if page.category == post.category %}
 <article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
 	{% if post.header-img %}
 	<figure class="post-featured-img">
@@ -55,20 +54,6 @@ description: "java code snippets"
     	</div>
 	</div>
 </article>
-{% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
 {% endif %}
+{% endfor %}
+				

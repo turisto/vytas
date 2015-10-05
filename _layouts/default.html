@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US" style="overflow-y: hidden;">
+
+{% include head.html %}
+
+<body class="home blog wide ajax-inafx-likes" role="document">
+		<div class="page-wrapper">
+			{% include nav.html %}
+		</div>
+		<div id="main" style="padding-top: 0px;">
+			<div id="content">
+				<div class="container">
+					<div class="row">
+						{{ content }}
+						
+					</div>
+				</div>
+			</div>
+			{% include footer.html %}
+    		<script type="text/javascript" src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/bootstrap.dropmenu.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/jquery.justifiedGallery.min.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/swipebox/jquery.swipebox.min.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/cycle/jquery.cycle.all.min.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/detectmobilebrowser.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/jquery.nicescroll.min.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+			<script type="text/javascript" src="{{ "/js/app.ui.js?ver=4.0.8" | prepend: site.baseurl }}"></script>
+		</div>
+    
+</body>
+<a href="#top" class="scrollup" style="display: block;">
+			<span class="fa fa-chevron-up"/>
+		</a>
+</html>

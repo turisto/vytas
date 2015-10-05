@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<article id="post-58" class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-photography tag-featured tag-vintage">
+                                                        <!-- ## zoom-box start ## -->
+                {% if page.header-img %}
+                <figure class="post-featured-img">
+                        <img src="{{ page.header-img }}" alt=" {{ page.title }}" class="img-responsive">
+                    </figure>
+                
+                {% endif %}
+                
+               
+                <!-- ## zoom-box end ## -->
+                            <!-- ## post-entry start ## -->
+    <div class="row post-entry">
+        <!-- ## title start ## -->
+        <div class="col-sm-12">
+            <!-- ## post-header start ## -->
+<header class="post-header">
+    <!-- ## post-title ## -->
+    <h2 class="post-title">
+    {{ page.title }}
+    </h2>
+</header>
+<!-- ## post-header end ## -->        </div>
+        <!-- ## title end ## -->
+        <!-- ## entry-meta start ## -->
+        <div class="col-sm-12 entry-meta">
+                        <span class="meta"><span class="fa fa-file-text-o"></span></span>            
+                         
+                                 <span class="meta"> On <span class="date"><time class="entry-date">{{ page.date | date: "%B %-d, %Y" }}</time></span></span>   
+                            	<span class="meta">
+                                          <span class="fa fa-folder-open-o"></span>
+                                          <span class="categories-links">
+                                          	<a href="/categories/{{page.category}}/" rel="category tag">{{page.category}}</a>
+                                          </span></span>        </div>
+        <!-- ## entry-meta end ## -->
+        <!-- ## entry-content start ## -->
+<div class="col-sm-12 entry-content">
+<p><span style="color: #000000;">
+
+{{ content }}
+
+
+</span>
+
+
+</p>
+</div>
+<div class="col-sm-12 entry-meta-tags">
+	<span class="tags-links">
+		{% for tag in page.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"> {{ tag }}</a>  
+		{% endfor %} 
+	</span>
+</div>
+    </div>
+<div class="row post-social">
+    <div class="col-sm-12">
+        <!-- ## inline list start ## -->
+        <ul class="list-inline">
+            <li><a class="fa fa-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}{{ post.url }}','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}"></a></li>
+            <li><a class="fa fa-twitter" onclick="window.open('http://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{page.title}}','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{page.title}}"></a></li>
+            <li><a class="fa fa-google-plus" onclick="window.open('https://plus.google.com/share?url={{ site.url }}{{ page.url }}','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"></a></li>
+            <li><a class="fa fa-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}"></a></li>
+                    </ul>
+        <!-- ## inline list end ## -->
+    </div>
+</div>
+<!-- ## post-social end ## -->
+</article>
+
+
