@@ -1,0 +1,14 @@
+---
+layout: post
+title: Eclipse Mars Update 1 arrives: Gradle support and bug fixes
+category: tools
+link: "https://jaxenter.com/eclipse-mars-update-1-arrives-gradle-support-and-bug-fixes-121232.html"
+
+"external-img": "https://jaxenter.com/wp-content/uploads/2015/10/eclipse-mars-e1444047807435.png"
+published: true
+external: true
+---
+
+<p>
+The first update for Eclipse Mars is now available, featuring support for the build system Gradle. 'Mars.1' also marks an important change in the Eclipse update cycle – instead of two yearly service releases, we can expect more frequent updates in future. 
+</p>
