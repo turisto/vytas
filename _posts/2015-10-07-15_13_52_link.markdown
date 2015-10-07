@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Enterprise community set to meet at JAX London community night - JAXenter"
+category: java
+link: "https://jaxenter.com/jax-london-community-night-120702.html"
+"external-img": "https://jaxenter.com/wp-content/uploads/2015/07/Untitled-design-2.png"
+published: true
+external: true
+---
+<p>
+Programmers from all over the UK are signing up for a free community night and panel discussion on business and technology at the JAX London conference.</p>
