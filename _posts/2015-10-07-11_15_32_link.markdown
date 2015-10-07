@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Video of SpaceX internship - Business Insider"
+category: space
+link: "http://uk.businessinsider.com/video-of-spacex-internship-2015-10?utm_source=feedly&utm_medium=webfeeds?r=US&IR=T"
+"external-img": "http://static4.uk.businessinsider.com/image/56144fe8dd0895794b8b4741/heres-what-its-like-to-be-one-of-the-select-few-to-intern-at-spacex.jpg"
+published: true
+external: true
+---
+<p>
+'I get to come to work and play with spaceships all day.'</p>
