@@ -27,7 +27,6 @@
         init_gmaps();
         init_scrollToTop();
 
-        if (!$.browser.mobile) {
             if (inafx_theme.niceScroll != 0) {
                 $("html").niceScroll({ scrollspeed: 200, horizrailenabled: false });
             }
@@ -36,7 +35,7 @@
                     $("html").getNiceScroll().resize();
                 }
             });
-        }
+        
         $('.author-social a').tooltip();
         $('#nav-dropdown-menu1').dropmenu();
         $('#header .navbar-toggle').click(function () {
