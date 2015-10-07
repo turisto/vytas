@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Employee Relocation Platform Move Guides Closes $15.6M Series B | TechCrunch"
+category: startups
+link: "http://techcrunch.com/2015/10/07/employee-relocation-platform-move-guides-closes-15-6m-series-b/?ncid=rss"
+"external-img": "https://tctechcrunch2011.files.wordpress.com/2015/10/press-release-image.jpg?w=764&h=400&crop=1"
+published: true
+external: true
+---
+<p>
+Move Guides, the London and San Francisco startup that offers 'talent mobility' software in the cloud to help companies manage the relocation of their..</p>
