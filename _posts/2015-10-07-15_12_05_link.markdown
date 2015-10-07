@@ -1,0 +1,11 @@
+---
+layout: post
+title: "The Tech-Powered Training That's Forging Superathletes | WIRED"
+category: technologies
+link: "http://www.wired.com/2015/10/tech-powered-training-thats-forging-superathletes/"
+"external-img": "http://www.wired.com/wp-content/uploads/2015/10/Screen-Shot-2015-10-06-at-3.56.27-PM-1200x630-e1444190107847.jpg"
+published: true
+external: true
+---
+<p>
+How a San Francisco-area laboratory turned Jeremy Lin, Jason Castro, Teresa Noyola, and others into top athletes.</p>
