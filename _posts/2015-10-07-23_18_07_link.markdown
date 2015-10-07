@@ -8,4 +8,5 @@ published: true
 external: true
 ---
 <p>
-Also urging for regulation</p>
+Volvo says it is one of the first self-driving car makers that promises to "accept full liability whenever one if its cars is in autonomous modes."
+</p>
