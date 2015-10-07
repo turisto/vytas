@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Multi-Tenancy with separate database schemas in Activiti | Java Code Geeks"
+category: tools
+link: "http://www.javacodegeeks.com/2015/10/multi-tenancy-with-separate-database-schemas-in-activiti.html"
+"external-img": "http://a3ab771892fd198a96736e50.javacodegeeks.netdna-cdn.com/wp-content/uploads/2012/10/activiti-logo.jpg"
+published: true
+external: true
+---
+<p>
+One feature request we’ve heard in the past is that of running the Activiti engine in a multi-tenant...</p>
