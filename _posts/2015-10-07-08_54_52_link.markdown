@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Jumping robot uses safety tethers to control its fall"
+category: robots
+link: "http://www.engadget.com/2015/10/07/jumping-robot-uses-safety-tethers-to-control-its-fall/"
+"external-img": "http://o.aolcdn.com/dims5/amp:cda5c302722385f5f32c473ae0431f0c980e2627/r:960,504,min/c:960,504,0,3/q:80/http:/o.aolcdn.com/dims-shared/dims3/GLOB/crop/3818x2546+0+0/resize/1200x800!/format/jpg/quality/85/http:/hss-prod.hss.aol.com/hss/storage/midas/1e0bc4418d78d2df0e9d5f5ddb35158/200548203/452546879.jpg"
+published: true
+external: true
+---
+<p>
+Robo-spiders have no need for your puny human trust falls.</p>
