@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Volvo steps up as first automaker to take responsibility for self-driving car accidents | TechRadar"
+category: cars
+link: "http://www.techradar.com/us/news/car-tech/volvo-steps-up-as-first-automaker-to-take-responsibility-for-self-driving-car-accidents-1306293?src=rss&attr=all"
+"external-img": "http://cdn.mos.techradar.com/art/car%20tech/Volvo/Autonomous%20driving/Volvo-selfdrive1-1200-80.jpg"
+published: true
+external: true
+---
+<p>
+Also urging for regulation</p>
