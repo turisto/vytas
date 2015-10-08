@@ -1,0 +1,11 @@
+---
+layout: post
+title: "NASA set to make ‘amazing’ announcement about Pluto today | Dispatch Tribunal"
+category: space
+link: "http://www.dispatchtribunal.com/nasa-set-to-make-amazing-announcement-about-pluto-today/6298/"
+"external-img": "http://www.dispatchtribunal.com/wp-content/uploads/2015/09/NH-Pluto-Wide-Angel-View-e1442556010626.jpg"
+published: true
+external: true
+---
+<p>
+</p>
