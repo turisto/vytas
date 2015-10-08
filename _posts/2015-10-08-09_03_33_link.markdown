@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Google Invests In DFKI, An Artificial Intelligence Research Center In Germany | TechCrunch"
+category: technologies
+link: "http://techcrunch.com/2015/10/07/google-invests-in-dfki-an-artificial-intelligence-research-center-in-germany/?ncid=rss"
+"external-img": "https://tctechcrunch2011.files.wordpress.com/2015/10/screen-shot-2015-10-08-at-01-33-59.png?w=764&h=400&crop=1"
+published: true
+external: true
+---
+<p>
+Google has been putting serious investment into building out its artificial intelligence, deep learning and robotics capabilities, and this week the company..</p>
