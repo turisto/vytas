@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Bitcoin Hardware Startup 21 Hires The Top Bitcoin.org Developers, Opens Education Portal | TechCrunch"
+category: startups
+link: "http://techcrunch.com/2015/10/08/bitcoin-21-balaji/?ncid=rss"
+"external-img": "https://tctechcrunch2011.files.wordpress.com/2015/10/21-bitcoin.jpg?w=764&h=400&crop=1"
+published: true
+external: true
+---
+<p>
+21 is a mysterious Bitcoin hardware and mining startup backed by Andreessen Horowitz that unwrapped its first product earlier this year. A few weeks ago,..</p>
