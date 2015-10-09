@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Credit Suisse prepares substantial capital raising - FT.com"
+category: finance
+link: "http://www.ft.com/intl/cms/s/0/09c8c42e-6d19-11e5-aca9-d87542bf8673.html?ftcamp=published_links%2Frss%2Fhome_europe%2Ffeed%2F%2Fproduct#axzz3o3NyFaBs"
+"external-img": "http://im.ft-static.com/content/images/0d53b3b1-1252-4a4f-aa68-2290e2fc379a.img"
+published: true
+external: true
+---
+<p>
+Tidjane Thiam, Credit Suisse’s new chief executive, is preparing to launch a substantial capital raising when he unveils his strategic plan for the bank in two weeks’ time, according to people briefed on the plan. While not specifying an amount,</p>
