@@ -1,0 +1,11 @@
+---
+layout: post
+title: "DZone"
+category: technologies
+link: "https://dzone.com/articles/10-tips-for-10x-application-performance"
+"external-img": "{{service.img}}"
+published: true
+external: true
+---
+<p>
+{{service.description}}</p>
