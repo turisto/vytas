@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Where in Europe to start a new business - Business Insider"
+category: startups
+link: "http://www.businessinsider.com/where-in-europe-to-start-a-new-business-2015-10?utm_source=feedly&utm_medium=webfeeds"
+"external-img": "http://static1.uk.businessinsider.com/image/551172c2848fb6c8741c80a9/these-are-the-best-places-in-europe-to-start-a-new-business.jpg"
+published: true
+external: true
+---
+<p>
+Enterprise business rates in European countries help us see which countries are the most entreprenuerial</p>
