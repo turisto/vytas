@@ -1,0 +1,15 @@
+---
+layout: post
+title: "How League of Legends Scaled Chat to 70 million Players - It takes Lots of minions. - High Scalability -"
+category: technologies
+link: "http://highscalability.squarespace.com/blog/2014/10/13/how-league-of-legends-scaled-chat-to-70-million-players-it-t.html"
+"external-img": "https://farm4.staticflickr.com/3931/15319028040_2c841d841e_m.jpg"
+published: true
+external: true
+---
+<p>
+ 
+
+ 
+
+ How would you build a chat service that needed to handle 7.5 million concurrent players, 27 ...</p>
