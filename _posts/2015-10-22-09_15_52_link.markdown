@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Basics of scaling Java EE applications | Java Code Geeks"
+category: technologies
+link: "http://www.javacodegeeks.com/2015/10/basics-of-scaling-java-ee-applications.html"
+"external-img": "http://a3ab771892fd198a96736e50.javacodegeeks.netdna-cdn.com/wp-content/uploads/2012/10/enterprise-java-logo.jpg"
+published: true
+external: true
+---
+<p>
+To be honest, ‘scalability’ is an exhaustive topic and generally not well understood. More often tha...</p>
