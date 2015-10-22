@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Angular 2 is coming soon (but Angular 1 is not going anywhere) - JAXenter"
+category: tools
+link: "https://jaxenter.com/angular-2-is-coming-soon-but-angular-1-is-not-going-anywhere-121678.html"
+"external-img": "https://jaxenter.com/wp-content/uploads/2015/10/Screen-Shot-2015-10-21-at-11.56.35-e1445425076287.png"
+published: true
+external: true
+---
+<p>
+Google again reassures the community about the longevity of the Angular 1 series, while announcing new details of the next generation, among them Angular Universal and a new tool called angular-cli.</p>
