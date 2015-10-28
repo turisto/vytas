@@ -2,9 +2,9 @@
 layout: post
 title: "Doing Business 2016 - Measuring Regulatory Quality and Efficiency - World Bank Group"
 category: startups
-link: "http://www.doingbusiness.org/reports/global-reports/doing-business-2016"
+link: "http://goo.gl/Wf2IrN"
 published: true
 external: true
 ---
-<p>
+<p>The 13th in a series of annual reports measuring the regulations that enhance business activity and those that constrain it. Many interesting details put into this document.
 </p>
