@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Japan's Carmakers Proceed With Caution on Self-Driving Cars - Bloomberg Business"
+category: cars
+link: "http://goo.gl/a2leKN"
+"external-img": "http://assets.bwbx.io/images/iPwDCprYZdFg/v1/-1x-1.jpg"
+published: true
+external: true
+---
+<p>
+The technology in use is virtually identical: cameras, radar, and GPS working together to turn cars into self-driving machines. What separates Japan’s automakers and companies like Google Inc. and Tesla Motors Inc. is when they predict fully autonomous vehicles will be ready.</p>
