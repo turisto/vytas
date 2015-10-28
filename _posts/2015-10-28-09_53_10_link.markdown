@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Zero-Index Metamaterials Open New Possibilities for Optical Chips - IEEE Spectrum"
+category: technologies
+link: "http://spectrum.ieee.org/tech-talk/computing/hardware/zeroindex-metamaterials-open-new-possibilities-in-optical-chips"
+"external-img": "http://spectrum.ieee.org/img/this_file_will_be_autodeleted_in_24hrs_08ONjyATNKYrgi16pcb-15g-1445363823259.jpg"
+published: true
+external: true
+---
+<p>
+Will metamaterials improve optical chips?</p>
