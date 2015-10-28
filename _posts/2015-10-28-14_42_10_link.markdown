@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Military Tech Could Make Football Gear Lighter and Safer | WIRED"
+category: tools
+link: "http://goo.gl/WsS1ul"
+"external-img": "http://www.wired.com/wp-content/uploads/2015/10/GettyImages-460118360-1200x630-e1445991793962.jpg"
+published: true
+external: true
+---
+<p>
+In the next 50 years, advances in materials science will allow for gear that protects players without giving them a false sense of security.</p>
