@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Google installing hundreds of internet-enabled balloons in Indonesia | Technology | The Guardian"
+category: technologies
+link: "http://goo.gl/qdZVIU"
+"external-img": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/10/28/1446074873589/c5a4f23b-857f-494b-9a65-c1fb34a52ce5-2060x1236.jpeg?w=1200&q=85&auto=format&sharp=10&s=2e61ffdf290974496461ded0aaec7ea4"
+published: true
+external: true
+---
+<p>
+Working with three local internet providers, Google is trying to expand in Indonesia by installing helium-filled balloons in the stratosphere</p>
