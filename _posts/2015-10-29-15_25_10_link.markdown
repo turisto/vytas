@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Meet Deeplearning4J and BIDData – Two Emerging Machine Learning Technologies for the JVM | Voxxed"
+category: java
+link: "https://goo.gl/8AlT0q"
+"external-img": "https://dmnphg4ua2zej.cloudfront.net/wp-content/uploads/2015/10/deep.jpg"
+published: true
+external: true
+---
+<p>
+</p>
