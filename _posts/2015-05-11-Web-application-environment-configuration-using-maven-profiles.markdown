@@ -8,7 +8,7 @@ published: true
 ---
 
 <p>
-Ok, this bog will be short. I will just share some small maven code snippets to configure your build and development IDE environment.
+Ok, this blog post will be short. I will just share some small maven code snippets to configure your build and development IDE environment.
 
 </p>
 

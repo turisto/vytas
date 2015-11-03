@@ -1,0 +1,42 @@
+---
+layout: page
+description: "java code snippets"
+"header-img": "img/1.png"
+body_class: "cp_theme-style-1 cp_theme-4-bg"
+---
+
+<!--THEME PAGE 4 START-->
+    <section class="theme-4-post">
+      <div class="container">
+        {% for post in paginator.posts %}
+        <div class="cp-post-box-2">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="left-box"> <strong class="date">{{ post.date | date: "%B %-d" }}<br>
+                {{ post.date | date: "%Y" }}</strong> </div>
+            </div>
+            <div class="col-md-10">
+              	{% if post.header-img %}
+              		<div class="frame"><a href="#"><img src="/{{ post.header-img }}" alt="{{ post.title }}"></a></div>      
+   				{% endif %}
+   
+              
+              <div class="text-box">
+                <h2><a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"  {% if post.external %} rel="nofolow"{% endif %}>{{ post.title }}</a></h2>
+                <style>
+					.p{{forloop.index}}:before {
+						content: "{{ post.excerpt | strip_html |  truncatewords: 1 | split: "" | first }}";
+					}
+				</style>
+                <div class="inner"> <strong class="p{{forloop.index}}">{{ post.excerpt }}</strong>
+                  <a href="{% if post.external %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" class="btn-continue">Continue Reading...</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       {% endfor %}
+       
+      </div>
+    </section>
+    <!--THEME PAGE 4 END-->
+

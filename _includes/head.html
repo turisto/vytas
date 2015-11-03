@@ -1,32 +1,30 @@
-<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
-		<title>vytas.io - {% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 		<meta property="og:description" content=" {% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.title }}{% endif %}">
 		
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+		<link rel="shortcut icon" type="image/png" href="{{ "images/author.jpg" | prepend: site.baseurl }}"/>
 		
-		
-		<link rel="stylesheet" type="text/css" media="all" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}"/>
-		<link rel="stylesheet" type="text/css" media="all" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}"/>
-		<link rel="stylesheet" type="text/css" media="all" href="{{ "/css/style.css" | prepend: site.baseurl }}"/>
-		<link rel="stylesheet" id="dropmenu-css" href="{{ "/css/dropmenu.css?ver=4.0.8" | prepend: site.baseurl }}" type="text/css" media="all"/>
-		<link rel="stylesheet" id="styles-css" href="{{ "/css/styles.css?ver=4.0.8" | prepend: site.baseurl }}" type="text/css" media="all"/>
-		<link rel="stylesheet" id="list-styles-css" href="{{ "/css/fa-list.css?ver=4.0.8" | prepend: site.baseurl }}" type="text/css" media="all"/>
-		<link rel="stylesheet" id="justifiedGallery.min-css" href="{{ "/css/justifiedGallery.min.css?ver=4.0.8" | prepend: site.baseurl }}" type="text/css" media="all"/>
-		<link rel="stylesheet" id="swipebox-css" href="{{ "/js/swipebox/swipebox.css?ver=4.0.8" | prepend: site.baseurl }}" type="text/css" media="all"/>
-		<link rel="stylesheet" id="custom-styles-css" href="{{ "/css/custom.css?ver=4.0.8" | prepend: site.baseurl }}" type="text/css" media="all"/>
-		<link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Merriweather%3A300%7CRaleway%3A700%2C400&amp;ver=1415600913" type="text/css" media="all"/>
-		<script type="text/javascript">
-/* <![CDATA[ */
-var inafx_theme = {"niceScroll":"1","stickyHeader":"0"};
-/* ]]> */
-</script>
-		<script type="text/javascript" src="{{ "/js/jquery-2.1.1.min.js" | prepend: site.baseurl }}"></script>
-		<meta name="generator" content="WordPress 4.0.8"/>
-		<link rel="shortcut icon" type="image/png" href="images/author.jpg | prepend: site.baseurl }}"/>
-	</head>
+		<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<!--CUSTOM CSS-->
+		<link href="{{ "/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<!--BOOTSTRAP 3.3.5-->
+		<link href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<!--RESPONSIVE-->
+		<link href="{{ "/css/responsive.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<!--FONT AWESOME-->
+		<link href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<!--GOOGLE FONTS-->
+		<link href="{{ "http://fonts.googleapis.com/css?family=Playfair+Display:400,700" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<link href="{{ "http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<link href="{{ "http://fonts.googleapis.com/css?family=Raleway" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+		<!--HTML5-->
+		<script src="{{ "/js/html5.js" | prepend: site.baseurl }}"></script>
+	</head
+	
 	
 	
 	

@@ -2,6 +2,7 @@
 title: vytas.io
 description: "Java EE architecture, design and development tips, hints, code snippets and other random ideas."
 url: "http://vytas.io"
+baseurl: ""
 twitter_username: vytas.io
 github_username:  vytas.io
 facebook_username:  vytas.io
@@ -12,4 +13,8 @@ highlighter: pygments
 permalink: /blog/:categories/:title/
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate]
+
+
 
