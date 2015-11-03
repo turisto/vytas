@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java object to object mapping - which framework to choose? - Part 2 | vytas.io</title>
+
+	<meta property="og:title" content="Java object to object mapping - which framework to choose? - Part 2">
+	<meta property="og:description" content=" 
+We've started a discussion on current mapping frameworks in Part 1.
+Selection was minimized to Selma and MapStruct.
+So which one to choose if I do not want to do the job myself?
+
+
+">
+		
+	<link rel="canonical" href="http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/">
+	<link rel="shortcut icon" type="image/png" href="images/author.jpg"/>
+		
+<!--CUSTOM CSS-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<!--BOOTSTRAP 3.3.5-->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--RESPONSIVE-->
+<link href="/css/responsive.css" rel="stylesheet" type="text/css">
+<!--FONT AWESOME-->
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!--GOOGLE FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!--HTML5-->
+<script src="/js/html5.js"></script>
+</head>
+
+<body class="cp_theme-style-1 cp_theme-4-bg">
+<!--WRAPPER START-->
+<div id="wrapper"> 
+  
+  <!--HEADER STYLE 1 START-->
+  <header id="cp-header-style-1" class="cp-header-style-4"> 
+   
+    <div class="container">
+      <div class="bottom-row">
+        <ul class="head-4-social">
+          <li><a href="https://www.facebook.com/vytas.io/"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/vytas_io"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vytasr"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        
+        <strong class="logo"><a href="index.html"><img src="/images/logo.png" alt="img"></a></strong> </div>
+    </div>
+  </header>
+  <!--HEADER STYLE 1 END--> 
+  
+  <!--MAIN START-->
+  <div id="main"> 
+    <!--POST PAGE START-->
+<section class="cp-post-type">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="box">
+				<h2>
+					<a href="#">Java object to object mapping - which framework to choose? - Part 2</a>
+				</h2>
+				<div class="cp-admin-row">
+					<ul>
+						<li>
+							<a href="/categories/java">
+								<i class="fa fa-tags"></i>
+								java
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-calendar"></i>
+								August 19, 2015
+							</a>
+						</li>
+						 
+							<li>
+								<a href="/tags/java-ee">
+									<i class="fa fa-tag"></i> 
+									java-ee
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/selma">
+									<i class="fa fa-tag"></i> 
+									selma
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/mapstruct">
+									<i class="fa fa-tag"></i> 
+									mapstruct
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/mapping">
+									<i class="fa fa-tag"></i> 
+									mapping
+								</a>  
+							</li>
+						  
+              
+              
+					</ul>
+				</div>
+				
+				<div class="sound-frame">
+					<a href="#">
+						<img src="/images/object-mapping.jpg" alt="Java object to object mapping - which framework to choose? - Part 2">
+					</a>
+				</div>
+				
+				<style>
+.bigfont-4:before {
+	content: "W";
+}
+</style>
+				<div class="text">
+					<strong class="title bigfont-4">
+We've started a discussion on current mapping frameworks in Part 1.
+Selection was minimized to Selma and MapStruct.
+So which one to choose if I do not want to do the job myself?
+
+
+</strong>
+				</div>
+				<p>
+Selma and <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a> works well when initial learning curve passed how to configure a mapper. 
+There might be the personal preference which one to choose. More customizations come with Mapstruct. Generated code might be more readable in <a href="http://mapstruct.org/" rel="nofollow">MapStruct</a>, however they both might generate duplicated code when mapping from Object to a simple entity in case Object has multiple properties mapped. 
+</p>
+
+<h3>Simple comparison</h3>
+
+<table>
+<thead>
+<tr>
+<th>Subject/Feature
+</th>
+<th>Selma
+</th>
+<th>MapStruct
+</th>
+</tr>
+</thead>
+
+<tr>
+<td>Define mapping once
+</td>
+<td>ok
+</td>
+<td>using @InheritInverseConfiguration does not work in more complex scenarios (at the given time of writing the blog entry)
+</td>
+</tr>
+
+
+<tr>
+<td>Ease to define the mapping
+</td>
+<td>yes
+</td>
+<td>needs a good initial learning curve
+</td>
+</tr>
+
+
+<tr>
+<td>Customizations
+</td>
+<td>minimal
+</td>
+<td>advanced. Many places may be customized
+</td>
+</tr>
+
+<tr>
+<td>Generated code
+</td>
+<td>with duplications, readability might be improved
+</td>
+<td>with duplications, readability is better than Selma
+</td>
+</tr>
+
+<tr>
+<td>Annotation usage 
+</td>
+<td>class level
+</td>
+<td>method level
+</td>
+</tr>
+
+
+</table>
+
+<h3>Conclusion</h3>
+
+<p>
+I think both projects are great and it's up to you to decide which one you would like to use in your project. 
+There is always another option - do it yourself :)
+Currently I am using <a href="http://www.selma-java.org/" rel="nofollow">Selma</a>. Happy so far :)
+
+</p>
+
+<h3>Resources</h3>
+
+<ul>
+<li><a href="https://github.com/aracrown/ara-blog-examples/tree/master/s01e05" rel="nofollow">Source in Git repository</a></li>
+
+</ul>
+<p>
+<span class="caption text-muted">Photographs by <a href="https://www.flickr.com/photos/bonaparty/">Louis K.</a>.</span>
+</p>
+
+				<div class="share-row">
+					<h4>Share on</h4>
+					<ul>
+						<li class="color-1">
+							<a onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" 
+								href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/">
+								<i class="fa fa-facebook"></i>
+								Facebook
+							</a>
+						</li>
+						<li class="color-2">
+							<a onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/&amp;text=Java object to object mapping - which framework to choose? - Part 2','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/&amp;text=Java object to object mapping - which framework to choose? - Part 2">
+								<i class="fa fa-twitter"></i>
+								Twitter
+							</a>
+						</li>
+						<li class="color-3">
+							<a onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/">
+								<i class="fa fa-google-plus"></i>
+								Google+
+							</a>
+						</li>
+						<li class="color-4">
+							<a onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/java-object-to-object-mapping-which-framework-to-choose-part-2/">
+								<i class="fa fa-linkedin"></i>
+								Linkedin
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-2">
+				<div class="frame">
+					<a href="#">
+						<img src="/images/author.jpg" alt="img" style="width: 71px">
+					</a>
+				</div>
+				<div class="text-box">
+					<h4>
+						<a href="#">vytas</a>
+					</h4>
+					<p>Senior software engineer, software architect for java enterprise based solutions</p>
+					
+				</div>
+			</div>
+			
+			<div class="next-prev-row">
+				<div class="row">
+					<div class="col-md-6">
+						
+						<div class="next-box">
+							
+							<div class="text-box">
+								<a href="/blog/java/java-object-to-object-mapping-which-framework-to-choose/">
+									<h2>Previous Post</h2>
+									<p>Java object to object mapping - which framework to choose? - Part 1</p>
+								</a>
+							</div>
+						</div>
+						 
+					</div>
+					<div class="col-md-6">
+						 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</section>
+<!--POST PAGE END-->
+
+  </div>
+  <!--MAIN END--> 
+   
+  <!--FOOTER START-->
+  <section id="footer">
+    <div class="container">
+      
+      <div class="footer-bottom-section"> <strong class="copy">Powered by <a href="http://vytas.io/">vytas.io</a></strong> <a href="#" class="btn-back-top">Back to Top<i class="fa fa-angle-up"></i></a> </div>
+    </div>
+  </section>
+  <!--FOOTER END--> 
+</div>
+<!--WRAPPER END--> 
+<!--JQUERY 1.11.3--> 
+<script src="/js/jquery-1.11.3.min.js"></script> 
+<!--BOOTSTRAP 3.3.5--> 
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

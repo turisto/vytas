@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java EE application configuration using Aeonbits Owner | vytas.io</title>
+
+	<meta property="og:title" content="Java EE application configuration using Aeonbits Owner">
+	<meta property="og:description" content="  
+Every (almost) Java EE based application needs configuration — local, test or production — it does not matter. What matters — how easily this
+configuration solution is maintained and how easily the environment may be changed. 
+
+
+">
+		
+	<link rel="canonical" href="http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/">
+	<link rel="shortcut icon" type="image/png" href="images/author.jpg"/>
+		
+<!--CUSTOM CSS-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<!--BOOTSTRAP 3.3.5-->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--RESPONSIVE-->
+<link href="/css/responsive.css" rel="stylesheet" type="text/css">
+<!--FONT AWESOME-->
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!--GOOGLE FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!--HTML5-->
+<script src="/js/html5.js"></script>
+</head>
+
+<body class="cp_theme-style-1 cp_theme-4-bg">
+<!--WRAPPER START-->
+<div id="wrapper"> 
+  
+  <!--HEADER STYLE 1 START-->
+  <header id="cp-header-style-1" class="cp-header-style-4"> 
+   
+    <div class="container">
+      <div class="bottom-row">
+        <ul class="head-4-social">
+          <li><a href="https://www.facebook.com/vytas.io/"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/vytas_io"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vytasr"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        
+        <strong class="logo"><a href="index.html"><img src="/images/logo.png" alt="img"></a></strong> </div>
+    </div>
+  </header>
+  <!--HEADER STYLE 1 END--> 
+  
+  <!--MAIN START-->
+  <div id="main"> 
+    <!--POST PAGE START-->
+<section class="cp-post-type">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="box">
+				<h2>
+					<a href="#">Java EE application configuration using Aeonbits Owner</a>
+				</h2>
+				<div class="cp-admin-row">
+					<ul>
+						<li>
+							<a href="/categories/java">
+								<i class="fa fa-tags"></i>
+								java
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-calendar"></i>
+								May 1, 2015
+							</a>
+						</li>
+						 
+							<li>
+								<a href="/tags/cdi">
+									<i class="fa fa-tag"></i> 
+									cdi
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/java-ee">
+									<i class="fa fa-tag"></i> 
+									java-ee
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/owner">
+									<i class="fa fa-tag"></i> 
+									owner
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/configuration">
+									<i class="fa fa-tag"></i> 
+									configuration
+								</a>  
+							</li>
+						  
+              
+              
+					</ul>
+				</div>
+				
+				<style>
+.bigfont-4:before {
+	content: "E";
+}
+</style>
+				<div class="text">
+					<strong class="title bigfont-4"> 
+Every (almost) Java EE based application needs configuration — local, test or production — it does not matter. What matters — how easily this
+configuration solution is maintained and how easily the environment may be changed. 
+
+
+</strong>
+				</div>
+				<p> 
+There are many ways to achieve the requirement, however in this blog I will cover one of possible CDI based configuration solutions — Owner by <a href="http://owner.aeonbits.org/">http://owner.aeonbits.org/</a>. 
+</p>
+
+<p>
+Usually there are several stages when properties used in production:
+</p>
+
+<ol>
+<li>
+Hardcoded properties (usually done by novice programmers, otherwise I would treat such properties as constants);</li> <li>Properties file
+inside application war file (different properties configured during build time. It is not correct, because the same build cannot be deployed on
+different environments);
+</li> 
+<li>
+Properties file stored in server file system (properties are independent from war and is environment
+specific).
+</li>
+</ol>
+
+<p>
+Java EE lacks easy configuration functionality. There are many discussions related to this topic
+</p>
+
+<ol>
+<li>
+<a href="http://www.adam-bien.com/roller/abien/entry/how_to_configure_java_ee" data-href="http://www.adam-bien.com/roller/abien/entry/how_to_configure_java_ee" rel="nofollow">HOW TO
+CONFIGURE JAVA EE 6+ APPLICATIONS&nbsp;…WITHOUT XML</a>
+</li>
+
+<li>
+<a href="http://stackoverflow.com/questions/5335979/storing-and-editing-configuration-for-java-ee-applications" data-href="http://stackoverflow.com/questions/5335979/storing-and-editing-configuration-for-java-ee-applications" rel="nofollow">Storing and editing configuration for Java EE applications at Stack Overflow</a>
+</li>
+<li>
+<a href="http://blog.eisele.net/2011/09/configure-java-ee-applications-or.html" data-href="http://blog.eisele.net/2011/09/configure-java-ee-applications-or.html" rel="nofollow">Configure
+Java EE applications or “Putting Bien into practice”</a> and more others.
+</li>
+</ol>
+
+<p>
+However they need custom actions to take into account:
+</p>
+
+<ul>
+<li>
+You need to manage property injection yourself;
+</li>
+<li>
+You need to use <a href="http://projects.spring.io/spring-framework/" data-href="http://projects.spring.io/spring-framework/" rel="nofollow">Spring framework</a>, which has flexible configuration management mechanism. But do you need
+<a href="http://projects.spring.io/spring-framework/" data-href="http://projects.spring.io/spring-framework/" rel="nofollow">Spring</a> only for property loading? I believe — no ☺
+</li>
+</ul>
+
+<h3>Preconditions</h3>
+
+<p>You need this environment setup in order to successfully complete the provided guide:</p>
+
+<ul>
+<li>
+<a href="http://maven.apache.org/" data-href="http://maven.apache.org/" rel="nofollow">Apache Maven 3.x</a>
+</li>
+<li>
+<a href="http://www.eclipse.org/downloads/" data-href="http://www.eclipse.org/downloads/" rel="nofollow">Eclipse
+Luna</a>
+</li>
+<li>
+Java EE 7 profile
+</li>
+<li>
+<a href="http://owner.aeonbits.org/" data-href="http://owner.aeonbits.org/" rel="nofollow"><strong>Aeonbits Owner</strong></a>
+</li>
+</ul>
+
+<h3>Implementation</h3>
+
+<p><strong>Defining an interface</strong></p>
+
+<pre>
+/**
+ * Application configuration properties are defined here.
+ * 
+ * @author vicento.ramos
+ *
+ */
+@HotReload
+@Sources({
+“file:/etc/my-app.properties”, “file:~/.my-app.properties”, “classpath:/my-app.properties” })
+@Named(“applicationConfig”)
+public interface ApplicationConfig extends Accessible {
+ @DefaultValue(“50”)
+ @Key(“app.timeout”)
+ int getInitialTimeout();
+}
+</pre>
+
+<p><strong>Creating a producer</strong></p>
+
+<pre>
+/**
+ * Application scope based configuration file producer.
+ * 
+ * @author vicento.ramos
+ *
+ */
+@ApplicationScoped
+public class ApplicationConfigProducer {
+ @Produces
+ @ApplicationScoped
+ public ApplicationConfig produceSportsConfig() {
+  return ConfigFactory.create(ApplicationConfig.class);
+ }
+}
+</pre>
+
+<p><strong>Creating a properties file</strong></p>
+
+<p><strong>my-app.properties </strong>file may be stored in one of these
+locations:</p>
+
+<ul>
+<li>/etc/my-app.properties</li>
+<li>.my-app.properties</li>
+<li>/my-app.properties</li>
+</ul>
+
+<p>
+And the content of the file:</p>
+
+<pre>app.timeout=30</pre>
+
+<p><strong>Usage</strong></p>
+
+<pre>
+/**
+ * Sample injection point of properties.
+ * 
+ * @author
+vicento.ramos
+ *
+ */
+@Named
+public class SampleService {
+ @Inject
+ private ApplicationConfig applicationConfig;
+ 
+ public void method() {
+  System.out.println(String.format(“Config value: %d”, 
+  applicationConfig.getInitialTimeout()));
+ }
+}
+</pre>
+
+<h3>Features</h3>
+
+<ul>
+<li>Multiple configuration locations — you may configure multiple lookup locations where
+configuration files may be fetched from;</li>
+<li>CDI Injection — Java EE based CDI injection using <em>@Named</em> and <em>@Inject </em>annotation</li><li>Default values — you may configure default values easily using <em>@DefaultValue</em></li><li>Hot reload — you may easily define the interval for properties hot reloading using 
+<em>@HotReload</em></li><li>And many more if required</li></ul>
+
+<h3>Resources</h3>
+
+<ul><li><a href="https://github.com/aracrown/ara-blog-examples/tree/master/s01e01" data-href="https://github.com/aracrown/ara-blog-examples/tree/master/s01e01" rel="nofollow">Source in Git
+repository</a></li></ul>
+
+
+				<div class="share-row">
+					<h4>Share on</h4>
+					<ul>
+						<li class="color-1">
+							<a onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" 
+								href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/">
+								<i class="fa fa-facebook"></i>
+								Facebook
+							</a>
+						</li>
+						<li class="color-2">
+							<a onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/&amp;text=Java EE application configuration using Aeonbits Owner','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/&amp;text=Java EE application configuration using Aeonbits Owner">
+								<i class="fa fa-twitter"></i>
+								Twitter
+							</a>
+						</li>
+						<li class="color-3">
+							<a onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/">
+								<i class="fa fa-google-plus"></i>
+								Google+
+							</a>
+						</li>
+						<li class="color-4">
+							<a onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/java-ee-application-configuration-using-aeonbits-owner/">
+								<i class="fa fa-linkedin"></i>
+								Linkedin
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-2">
+				<div class="frame">
+					<a href="#">
+						<img src="/images/author.jpg" alt="img" style="width: 71px">
+					</a>
+				</div>
+				<div class="text-box">
+					<h4>
+						<a href="#">vytas</a>
+					</h4>
+					<p>Senior software engineer, software architect for java enterprise based solutions</p>
+					
+				</div>
+			</div>
+			
+			<div class="next-prev-row">
+				<div class="row">
+					<div class="col-md-6">
+						 
+					</div>
+					<div class="col-md-6">
+						 
+						<div class="prev-box">
+							
+							<div class="text-box">
+								<a href="/blog/java/web-application-environment-configuration-using-maven-profiles/">
+									<h2>Next Post</h2>
+									<p>Web application environment configuration using maven profiles</p>
+								</a>
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</section>
+<!--POST PAGE END-->
+
+  </div>
+  <!--MAIN END--> 
+   
+  <!--FOOTER START-->
+  <section id="footer">
+    <div class="container">
+      
+      <div class="footer-bottom-section"> <strong class="copy">Powered by <a href="http://vytas.io/">vytas.io</a></strong> <a href="#" class="btn-back-top">Back to Top<i class="fa fa-angle-up"></i></a> </div>
+    </div>
+  </section>
+  <!--FOOTER END--> 
+</div>
+<!--WRAPPER END--> 
+<!--JQUERY 1.11.3--> 
+<script src="/js/jquery-1.11.3.min.js"></script> 
+<!--BOOTSTRAP 3.3.5--> 
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

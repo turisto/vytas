@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web application environment configuration using maven profiles | vytas.io</title>
+
+	<meta property="og:title" content="Web application environment configuration using maven profiles">
+	<meta property="og:description" content=" 
+Ok, this blog post will be short. I will just share some small maven code snippets to configure your build and development IDE environment.
+
+
+">
+		
+	<link rel="canonical" href="http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/">
+	<link rel="shortcut icon" type="image/png" href="images/author.jpg"/>
+		
+<!--CUSTOM CSS-->
+<link href="/css/custom.css" rel="stylesheet" type="text/css">
+<!--BOOTSTRAP 3.3.5-->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--RESPONSIVE-->
+<link href="/css/responsive.css" rel="stylesheet" type="text/css">
+<!--FONT AWESOME-->
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!--GOOGLE FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!--HTML5-->
+<script src="/js/html5.js"></script>
+</head>
+
+<body class="cp_theme-style-1 cp_theme-4-bg">
+<!--WRAPPER START-->
+<div id="wrapper"> 
+  
+  <!--HEADER STYLE 1 START-->
+  <header id="cp-header-style-1" class="cp-header-style-4"> 
+   
+    <div class="container">
+      <div class="bottom-row">
+        <ul class="head-4-social">
+          <li><a href="https://www.facebook.com/vytas.io/"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/vytas_io"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vytasr"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        
+        <strong class="logo"><a href="index.html"><img src="/images/logo.png" alt="img"></a></strong> </div>
+    </div>
+  </header>
+  <!--HEADER STYLE 1 END--> 
+  
+  <!--MAIN START-->
+  <div id="main"> 
+    <!--POST PAGE START-->
+<section class="cp-post-type">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="box">
+				<h2>
+					<a href="#">Web application environment configuration using maven profiles</a>
+				</h2>
+				<div class="cp-admin-row">
+					<ul>
+						<li>
+							<a href="/categories/java">
+								<i class="fa fa-tags"></i>
+								java
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-calendar"></i>
+								May 11, 2015
+							</a>
+						</li>
+						 
+							<li>
+								<a href="/tags/java-ee">
+									<i class="fa fa-tag"></i> 
+									java-ee
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/configuration">
+									<i class="fa fa-tag"></i> 
+									configuration
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/maven">
+									<i class="fa fa-tag"></i> 
+									maven
+								</a>  
+							</li>
+						  
+							<li>
+								<a href="/tags/CD">
+									<i class="fa fa-tag"></i> 
+									CD
+								</a>  
+							</li>
+						  
+              
+              
+					</ul>
+				</div>
+				
+				<style>
+.bigfont-4:before {
+	content: "O";
+}
+</style>
+				<div class="text">
+					<strong class="title bigfont-4">
+Ok, this blog post will be short. I will just share some small maven code snippets to configure your build and development IDE environment.
+
+
+</strong>
+				</div>
+				
+<p>
+For some projects there is a need to use specific environment properties, which may differ from deployment environment.
+Let's say in your IDE you use <em>"Development"</em> mode, however it is obvious that test, QA and production environments will use <em>"Deployment"</em> mode.
+</p>
+<p>
+Usually such property is stored in <strong>web.xml</strong> file, for example:
+</p>
+
+<pre>
+&lt;context-param&gt;
+    &lt;param-name&gt;javax.faces.PROJECT_STAGE&lt;/param-name&gt;
+    &lt;param-value&gt;${jsf.projectStage}&lt;/param-value&gt;
+&lt;/context-param&gt;
+</pre>
+
+<h3>Issue</h3>
+<ol>
+<li>
+We do not want to commit <em>"Development"</em> mode into source control.
+</li>
+<li>
+We do not want to use <em>"Deployment"</em> mode in our local IDE.
+</li>
+<li>
+We do not want to have uncommitted changes if using <em>"Development"</em> mode locally.
+</li>
+<li>
+We DO want properly running local environment :) Sure!
+</li>
+</ol>
+
+<p>
+By default property <em>${jsf.projectStage}</em> is not properly understood by IDE (at least Eclipse WTP) and is not transformed into real value. Well, maybe it should be a nice feature...
+However, if you are using <a href="http://maven.apache.org/" data-href="http://maven.apache.org/" rel="nofollow">Apache Maven</a> then this can be easily fixed.
+</p>
+
+<h3>Talks and documentation</h3>
+
+<ol>
+<li>
+<a href="http://maven.apache.org/guides/introduction/introduction-to-profiles.html" rel="nofollow">
+Introduction to Build Profiles
+</a>
+</li>
+
+<li>
+<a href="http://stackoverflow.com/questions/28861267/eclipse-maven-profile-ignored" rel="nofollow">
+Eclipse + maven : profile ignored 
+</a>
+</li>
+<li>
+And the solution is on <a href="http://stackoverflow.com/" rel="nofollow">stackoverflow</a> described as well, however i could not find the link to it anymore when writing this blog :) I hope you will share this link with me :)
+</li>
+</ol>
+
+<h3>Preconditions</h3>
+
+<p>You need this environment setup in order to successfully complete the provided guide:</p>
+
+<ul>
+<li>
+<a href="http://maven.apache.org/" data-href="http://maven.apache.org/" rel="nofollow">Apache Maven 3.x</a>
+</li>
+<li>
+<a href="http://www.eclipse.org/downloads/" data-href="http://www.eclipse.org/downloads/" rel="nofollow">Eclipse
+Luna</a>
+</li>
+</ul>
+
+<h3>Solution</h3>
+
+<p>
+So far everything is about your <strong>pom.xml</strong> file configuration.
+You need to tell maven what resources should be filtered. Also tell maven which property file to use for resource filtering. 
+And resolve this property file name dynamically using <em>filter.name</em> maven property.
+</p>
+
+<pre>
+&lt;build&gt;
+    &lt;!-- Add filter file name --&gt;
+    &lt;filters&gt;
+        &lt;filter&gt;${basedir}/src/main/filters/${filter.name}.properties&lt;/filter&gt;
+    &lt;/filters&gt;
+
+    &lt;plugins&gt;
+        &lt;!--  Define filtered resources --&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.1.1&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;
+                &lt;webResources&gt;
+                    &lt;resource&gt;
+                        &lt;directory&gt;${basedir}/src/main/webapp&lt;/directory&gt;
+                        &lt;filtering&gt;true&lt;/filtering&gt;
+                        &lt;includes&gt;
+                            &lt;include&gt;WEB-INF/web.xml&lt;/include&gt;
+                            &lt;include&gt;WEB-INF/jboss-web.xml&lt;/include&gt;
+                        &lt;/includes&gt;
+                    &lt;/resource&gt;
+                &lt;/webResources&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</pre>
+
+<p>
+Then define different profiles you will need. And tell each profile which property file should be applied (<strong>&lt;filter.name&gt;production&lt;/filter.name&gt;</strong>).
+</p>
+
+<pre>
+&lt;profiles&gt;
+    &lt;profile&gt;
+        &lt;id&gt;default&lt;/id&gt;
+        &lt;activation&gt;
+            &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+        &lt;/activation&gt;
+    &lt;/profile&gt;
+    &lt;profile&gt;
+        &lt;id&gt;production&lt;/id&gt;
+        &lt;properties&gt;
+            &lt;filter.name&gt;production&lt;/filter.name&gt;
+        &lt;/properties&gt;
+    &lt;/profile&gt;
+&lt;/profiles&gt;
+</pre>
+
+<p>
+But we would like to have a default configuration for local environment. Let's define it in <strong>pom.xml</strong> as well.
+</p>
+
+<pre>
+&lt;properties&gt;
+    &lt;!-- Default name of file for filtering --&gt;
+    &lt;filter.name&gt;localhost&lt;/filter.name&gt;
+&lt;/properties&gt;</pre>
+
+<p><strong>Usage</strong></p>
+
+<p>
+Now, eclipse IDE should automatically resolve and use default properties when you import maven project.
+For continuous delivery and console based builds you might be using such command:
+</p>
+
+<pre>
+mvn clean package -Pproduction
+</pre>
+
+<p>
+<b>-P</b> may be avoided if you want to use default properties, e.g. for development build.
+</p>
+
+<p><strong>Properties file location</strong></p>
+
+<p>
+Yes, you may define your own property files location based on your project structure:
+</p>
+
+<pre>
+&lt;filters&gt;
+ &lt;filter&gt;${basedir}/src/main/filters/${filter.name}.properties&lt;/filter&gt;
+&lt;/filters&gt;
+</pre>
+
+<h3>Resources</h3>
+
+<ul><li>
+<a href="https://github.com/aracrown/ara-blog-examples/tree/master/s01e02" rel="nofollow">Source in Git
+repository</a>
+
+</li></ul>
+
+<p>
+Hopefully you did enjoy reading!
+</p>
+
+				<div class="share-row">
+					<h4>Share on</h4>
+					<ul>
+						<li class="color-1">
+							<a onclick="window.open('http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" 
+								href="http://www.facebook.com/sharer.php?u=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/">
+								<i class="fa fa-facebook"></i>
+								Facebook
+							</a>
+						</li>
+						<li class="color-2">
+							<a onclick="window.open('http://twitter.com/share?url=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/&amp;text=Web application environment configuration using maven profiles','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/&amp;text=Web application environment configuration using maven profiles">
+								<i class="fa fa-twitter"></i>
+								Twitter
+							</a>
+						</li>
+						<li class="color-3">
+							<a onclick="window.open('https://plus.google.com/share?url=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/">
+								<i class="fa fa-google-plus"></i>
+								Google+
+							</a>
+						</li>
+						<li class="color-4">
+							<a onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://vytas.io/blog/java/web-application-environment-configuration-using-maven-profiles/">
+								<i class="fa fa-linkedin"></i>
+								Linkedin
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-2">
+				<div class="frame">
+					<a href="#">
+						<img src="/images/author.jpg" alt="img" style="width: 71px">
+					</a>
+				</div>
+				<div class="text-box">
+					<h4>
+						<a href="#">vytas</a>
+					</h4>
+					<p>Senior software engineer, software architect for java enterprise based solutions</p>
+					
+				</div>
+			</div>
+			
+			<div class="next-prev-row">
+				<div class="row">
+					<div class="col-md-6">
+						
+						<div class="next-box">
+							
+							<div class="text-box">
+								<a href="/blog/java/java-ee-application-configuration-using-aeonbits-owner/">
+									<h2>Previous Post</h2>
+									<p>Java EE application configuration using Aeonbits Owner</p>
+								</a>
+							</div>
+						</div>
+						 
+					</div>
+					<div class="col-md-6">
+						 
+						<div class="prev-box">
+							
+							<div class="text-box">
+								<a href="/blog/java/writing-type-safe-queries-with-querydsl/">
+									<h2>Next Post</h2>
+									<p>Writing type-safe JPA queries with QueryDSL</p>
+								</a>
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</section>
+<!--POST PAGE END-->
+
+  </div>
+  <!--MAIN END--> 
+   
+  <!--FOOTER START-->
+  <section id="footer">
+    <div class="container">
+      
+      <div class="footer-bottom-section"> <strong class="copy">Powered by <a href="http://vytas.io/">vytas.io</a></strong> <a href="#" class="btn-back-top">Back to Top<i class="fa fa-angle-up"></i></a> </div>
+    </div>
+  </section>
+  <!--FOOTER END--> 
+</div>
+<!--WRAPPER END--> 
+<!--JQUERY 1.11.3--> 
+<script src="/js/jquery-1.11.3.min.js"></script> 
+<!--BOOTSTRAP 3.3.5--> 
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
