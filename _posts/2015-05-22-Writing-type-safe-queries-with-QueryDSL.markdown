@@ -79,7 +79,7 @@ create a metamodel for you:
 </p>
 
 <a href="#">
-    <img src="{{ site.baseurl }}/img/s01e03.png" alt="Eclipse annotation processing">
+    <img src="{{ site.baseurl }}/img/s01e03.png" alt="Eclipse annotation processing" class="frame2">
 </a>
 
 <p>
